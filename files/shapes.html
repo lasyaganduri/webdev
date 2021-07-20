@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<canvas id="canvas" width="900" height="700" style="border:1px solid #d3d3d3;" onclick="drawShapes(event)">
+    Sorry, the browser does not support canvas.
+</canvas>
+<script>
+    let canvas = document.getElementById("canvas");
+    let context = canvas.getContext("2d");
+    let clickArr = [];
+
+    class Circle {
+        constructor(xpoint, ypoint, radius, color) {
+            this.xpoint = xpoint;
+            this.ypoint = ypoint;
+            this.color = color;
+            this.radius = radius;
+        }
+
+        cir(context) {
+            context.beginPath();
+            context.arc(this.xpoint, this.ypoint, this.radius, 0, Math.PI * 2, false);
+            context.strokeStyle = "grey";
+            context.lineWidth = 3;
+            context.fillStyle = this.color;
+            context.fill();
+            context.stroke();
+            context.closePath();
+        }
+    }
+
+    class Rectangle {
+        constructor(xpoint, ypoint, width, height) {
+            this.xpoint = xpoint;
+            this.ypoint = ypoint
+            this.width = width;
+            this.height = height;
+        }
+
+        rec(context) {
+            context.beginPath();
+            context.rect(this.xpoint, this.ypoint, this.width, this.height);
+            context.strokeStyle = "grey";
+            context.lineWidth = 3;
+            context.fillStyle = "black";
+            context.fill();
+            context.stroke();
+        }
+    }
+
+    class Triangle {
+        constructor(xpoint, ypoint, line1, line2) {
+            this.xpoint = xpoint;
+            this.ypoint = ypoint;
+            this.line1 = line1;
+            this.line2 = line2;
+        }
+
+        tri(context) {
+            context.beginPath();
+            context.moveTo(this.xpoint, this.ypoint);
+            context.lineTo(this.xpoint - this.line1, this.ypoint + this.line1);
+            context.lineTo(this.xpoint + this.line2, this.ypoint + this.line2);
+            context.strokeStyle = "grey";
+            context.lineWidth = 3;
+            context.fillStyle = "red";
+            context.fill();
+            context.stroke();
+
+        }
+    }
+
+    class Square {
+        constructor(xpoint, ypoint, width, height) {
+            this.xpoint = xpoint;
+            this.ypoint = ypoint
+            this.width = width;
+            this.height = height;
+        }
+
+        squr(context) {
+            context.beginPath();
+            context.rect(this.xpoint, this.ypoint, this.width, this.height);
+            context.strokeStyle = "grey";
+            context.lineWidth = 3;
+            context.fillStyle = "yellow";
+            context.fill();
+            context.stroke();
+        }
+
+    }
+
+    class Oval {
+        constructor(xpoint, ypoint, radiusX, radiusY, rotation, startAngle, endAngle) {
+            this.xpoint = xpoint;
+            this.ypoint = ypoint;
+            this.radiusX = radiusX;
+            this.radiusY = radiusY;
+            this.rotation = rotation;
+            this.startAngle = startAngle;
+            this.endAngle = endAngle;
+
+        }
+
+        ovl(context) {
+            context.beginPath();
+            context.ellipse(this.xpoint, this.ypoint, this.radiusX, this.radiusY, this.rotation, this.startAngle, this.endAngle);
+            context.strokeStyle = "grey";
+            context.lineWidth = 3;
+            context.fillStyle = "purple";
+            context.fill();
+            context.stroke();
+            context.closePath();
+        }
+    }
+
+    function drawShapes(event) {
+        clickArr.push(event.clientX, event.clientY);
+        let circleCounter = 0;
+        let ovalCounterX = 5, ovalCounterY = 15;
+        let rectangleX = 20, rectangleY = 5;
+        let line1 = 10, line2 = 10;
+        let square = 20;
+        let interval = 0;
+
+        interval = setInterval(function () {
+            if (clickArr.length === 10) {
+                let circles = new Circle(clickArr[0], clickArr[1], circleCounter, 'blue')
+                circles.cir(context);
+                console.log(circleCounter)
+
+                let rects = new Rectangle(clickArr[2], clickArr[3], rectangleX, rectangleY);
+                rects.rec(context);
+
+                let trian = new Triangle(clickArr[4], clickArr[5], line1, line2);
+                trian.tri(context);
+
+                let sqrs = new Square(clickArr[6], clickArr[7], square, square);
+                sqrs.squr(context);
+
+                let ova = new Oval(clickArr[8], clickArr[9], ovalCounterX, ovalCounterY, Math.PI / 4, 0, 2 * Math.PI);
+                ova.ovl(context);
+
+                circleCounter++;
+                ovalCounterX++;
+                ovalCounterY++;
+                rectangleX++;
+                rectangleY++;
+                square++;
+                line1++;
+                line2++;
+
+                if (circleCounter === 100) {
+                    clearInterval(interval);
+                }
+            }
+        }, 30);
+
+    }
+</script>
+</body>
+</html>

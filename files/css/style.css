@@ -1,0 +1,105 @@
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #996633;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+body{
+  background-image: linear-gradient(to right, rgb(226, 233, 236), rgb(230, 255, 255));
+}
+.sidepanel {
+  height: 320px; /* Specify a height */
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+img{
+  width:300px;
+  height:300px;
+  text-align: center;
+}
+h3{
+  font-family: "Bradley Hand";
+  text-align: center;
+  font-size: medium;
+  color: #73264d;
+}
+pre{
+  font-family: Chalkduster;
+  text-align: center;
+  font-size: xx-large;
+  color: blueviolet;
+
+
+}
+h2{
+  font-family: Chalkduster;
+  text-align: center;
+  color:#ff4d4d;
+}
+.playbtn{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #003399;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  border-radius: 50%;
+}

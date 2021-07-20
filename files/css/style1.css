@@ -1,0 +1,135 @@
+
+table, th, td {
+  text-align:center;
+  border: 1px solid black;
+}
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+th{
+  height: 70px
+}
+thead th{
+  background-color: #ff9999;
+  color: white;
+  text-align: center;
+}
+tbody th{
+  background-color: #b08282;
+  color: white;
+}
+
+td {
+  background-color: #eddede;
+  text-align: center;
+  font-size: large;
+  font-style: bold;
+  color: #004d26;
+}
+
+body{
+
+    background-image: linear-gradient(to right, rgb(226, 233, 236), rgb(230, 255, 255));
+}
+pre{
+    	 text-align:center;
+       font-style: bold;
+     	color:#660066;
+     	font-size: large;
+
+}
+h2{
+   	text-align:center;
+   	color:brown;
+   	font-style:italic;
+   	font-size: xxx-large;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.div1{
+  text-align:center;
+  font-style: italic;
+  font-size: xx-large;
+  color:#73264d;
+
+}
+.sidepanel {
+    height: 320px; /* Specify a height */
+    width: 0px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+.table
+{
+  display: table;border-spacing: 20px;
+  }
+.caption {
+    display: table-caption;
+    font-size: xx-large;
+    text-align: center;
+    }
+.row {
+  display: table-row;
+}
+.row > * {
+    display: table-cell;
+    text-align: center;
+  }
+.row1 {
+    display: table-row;
+  }
+.row1 > * {
+      display: table-cell;
+      text-align: center;
+  }
+
+  .feedback {
+    text-align:  center;
+  }
