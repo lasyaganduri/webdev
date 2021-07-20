@@ -1,1 +1,22 @@
-[{"firstName":"fucck","lastName":"off","address":"you","apt":"143","email":"srilasyaganduri@gmail.com","phone":"1233322212","feedback":"hot it aa?","id":1},{"firstName":"fucck","lastName":"off","address":"you","apt":"143","email":"srilasyaganduri@gmail.com","phone":"1233322212","feedback":"hot it aa?","id":2}]
+[
+    {
+        "firstName": "Ganduri",
+        "lastName": "Lasya",
+        "address": "123 kjsnbf",
+        "apt": "12",
+        "email": "srilasyaganduri@gmail.com",
+        "phone": "1234567890",
+        "feedback": "This is it!\n",
+        "id": 1
+    },
+    {
+        "firstName": "Ganduri",
+        "lastName": "Sri Lasya",
+        "address": "13",
+        "apt": "1",
+        "email": "srilasyaganduri@gmail.com",
+        "phone": "1234567890",
+        "feedback": "Gidi final ra!",
+        "id": 2
+    }
+]
