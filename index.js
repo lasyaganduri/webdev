@@ -60,7 +60,7 @@ app.post('/api/members', (req,res) =>{
     if (error)
      throw error;
     });
-    sendMail(usr.email);
+    sendMail(usr.lastName, usr.email);
     res.send(members);
 
      
@@ -82,7 +82,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("server is running on port "+PORT));
 
 
-function sendMail(email_id){
+function sendMail(name, email_id){
     var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
@@ -97,7 +97,7 @@ var mailOptions = {
   from: 'srilasyaganduri@gmail.com',
   to: email_id,
   subject: 'Feedback response',
-  text: 'Thank you for giving your feedback! I really appreciate it!'
+  text: 'Dear '+name+', Thank you for your feedback! – From srilasya @ https://siu-webdev.herokuapp.com/'
 };
 
 transporter.sendMail(mailOptions, function(error, info){
