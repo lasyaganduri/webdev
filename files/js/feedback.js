@@ -72,7 +72,7 @@ function submit(){
 
       console.log(usr);
       var xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("POST","http://localhost:5000/api/members");
+      xmlhttp.open("POST","./api/members");
       xmlhttp.setRequestHeader("Content-Type","application/json;charset=UTF-8");
       xmlhttp.send(JSON.stringify(usr));
       
